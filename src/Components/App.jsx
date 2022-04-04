@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 import { Form } from './Form/Form';
 import Title from './Title/Title';
-import s from './App.module.css';
+import { BoxApp } from './App.styled';
 import ContactList from './ContactList/ContactList';
 import NotContacts from './NotContacts/NotContacts';
 
@@ -70,7 +70,7 @@ export const App = () => {
   };
 
   return (
-    <div className={s.conteiner}>
+    <BoxApp>
       <Title text={'Phonebook'} />
       <Form chengeSabmit={formSubmitApp} />
       <Title text={'Contacts'} />
@@ -85,6 +85,6 @@ export const App = () => {
           contacts={findeByName}
         />
       )}
-    </div>
+    </BoxApp>
   );
 };

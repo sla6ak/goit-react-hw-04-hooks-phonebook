@@ -1,4 +1,4 @@
-import s from './ContactList.module.css';
+import { ListPersons } from './ContactList.styled';
 import React from 'react';
 import NotContacts from 'Components/NotContacts/NotContacts';
 import propTypes from 'prop-types';
@@ -11,11 +11,11 @@ const ContactList = ({ onFinde, filter, deleteEl, contacts }) => {
     <>
       <Filter filter={filter} onFinde={onFinde} />
       {listCont.length > 0 ? (
-        <ul className={s.list}>
+        <ListPersons>
           {listCont.map(el => (
             <Contact key={el.id} elem={el} deleteEl={deleteEl} />
           ))}
-        </ul>
+        </ListPersons>
       ) : (
         <NotContacts text={'Nothing found for your request'} />
       )}

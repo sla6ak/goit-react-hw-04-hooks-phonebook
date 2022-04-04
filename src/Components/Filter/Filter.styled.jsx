@@ -1,4 +1,5 @@
-.inputFinde {
+import styled from '@emotion/styled';
+export const FilterPerson = styled.input`
   width: 200px;
   padding: 3px 10px;
   margin-top: 10px;
@@ -7,4 +8,4 @@
   display: flex;
   margin-left: 50px;
   margin-right: auto;
-}
+`;

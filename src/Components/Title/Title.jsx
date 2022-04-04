@@ -1,8 +1,8 @@
-import s from './Title.module.css';
+import { TitleSection } from './Title.styled';
 import propTypes from 'prop-types';
 
 const Title = ({ text }) => {
-  return <div className={s.title}>{text}</div>;
+  return <TitleSection>{text}</TitleSection>;
 };
 
 Title.propTypes = {

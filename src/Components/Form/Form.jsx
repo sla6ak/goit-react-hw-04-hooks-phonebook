@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
-import s from './Form.module.css';
+import { DataPerson, FormPerson, Sabmit, Label } from './Form.styled';
 import propTypes from 'prop-types';
 
 export const Form = ({ chengeSabmit }) => {
@@ -52,12 +52,9 @@ export const Form = ({ chengeSabmit }) => {
   };
 
   return (
-    <form className={s.form} action="" onSubmit={formSubmit}>
-      <label className={s.label} htmlFor={idName}>
-        enter name
-      </label>
-      <input
-        className={s.input}
+    <FormPerson action="" onSubmit={formSubmit}>
+      <Label htmlFor={idName}>enter name</Label>
+      <DataPerson
         id={idName}
         type="text"
         name="name"
@@ -67,11 +64,8 @@ export const Form = ({ chengeSabmit }) => {
         onChange={onCangeInpute}
         value={name}
       />
-      <label className={s.label} htmlFor={idTel}>
-        enter telephone
-      </label>
-      <input
-        className={s.input}
+      <Label htmlFor={idTel}>enter telephone</Label>
+      <DataPerson
         id={idTel}
         type="tel"
         name="number"
@@ -81,10 +75,8 @@ export const Form = ({ chengeSabmit }) => {
         value={number}
         onChange={onCangeInpute}
       />
-      <button className={s.sabmitBt} type="submit">
-        Save
-      </button>
-    </form>
+      <Sabmit type="submit">Save</Sabmit>
+    </FormPerson>
   );
 };
 

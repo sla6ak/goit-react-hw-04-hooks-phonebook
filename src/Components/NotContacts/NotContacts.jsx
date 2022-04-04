@@ -1,8 +1,8 @@
-import s from './NotContacts.module.css';
+import { Nossing } from './NotContacts.styled';
 import propTypes from 'prop-types';
 
 const NotContacts = ({ text }) => {
-  return <div className={s.not}>{text}</div>;
+  return <Nossing>{text}</Nossing>;
 };
 
 NotContacts.propTypes = {

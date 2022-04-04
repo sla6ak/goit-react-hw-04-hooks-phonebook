@@ -1,15 +1,15 @@
-import s from './Contact.module.css';
+import { Person, DeletedPerson } from './Contact.styled';
 import propTypes from 'prop-types';
 import { FiX } from 'react-icons/fi';
 
 const Contact = ({ elem, deleteEl }) => {
   return (
-    <li className={s.li}>
+    <Person>
       {elem.name}: {elem.numberTel}
-      <button onClick={() => deleteEl(elem.id)}>
-        <FiX className={s.svgFix} />
-      </button>
-    </li>
+      <DeletedPerson onClick={() => deleteEl(elem.id)}>
+        <FiX />
+      </DeletedPerson>
+    </Person>
   );
 };
 
